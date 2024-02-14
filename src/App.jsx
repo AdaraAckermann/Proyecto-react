@@ -1,27 +1,21 @@
-import "./App.css"
-import { Navbar } from "./Navbar"
-import { Footer } from "./Footer"
+import {Navbar} from "./components/layout/Navbar"
+
+import ItemListContainer from "./components/pages/ItemListContainer"
+
 
 const App = ()=> {
 
-  Navbar()
 
   return (
     <div>
+      <h1 className="title">Este es el titulo</h1>
 
-      {/*USAR EL NAVBAR */}
-      {/*Navbar() */}
       <Navbar />
 
-     <h1 className="title">Este es el titulo</h1>
-     <h2>un subtitulo</h2>
-     <h3>Algo mas</h3>
-
-
-     <Footer/>
+      <ItemListContainer greeting="Bienvenidos a Dakota Cupcakes" />
 
     </div> 
-  )
-}
+  );
+};
 
 export default App
