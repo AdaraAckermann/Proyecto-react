@@ -1,0 +1,8 @@
+
+
+.nav-opciones :hover {
+    background-color: #f07fca3a; /* Cambiar al color deseado */
+    color: #db3395; /* Cambiar al color deseado */
+    cursor: pointer; /* Cambiar al efecto de cursor deseado */
+  }
+  

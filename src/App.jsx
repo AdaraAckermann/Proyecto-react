@@ -1,21 +1,49 @@
-import {Navbar} from "./components/layout/Navbar"
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import { Navbar } from "./components/layout/navbar/Navbar";
+import { ItemDetailContainer } from "./components/pages/itemDetailContainer/ItemDetailContainer";
+import { getProducts } from "./productsMock";
+import ItemCountContainer from "./components/common/itemCount/ItemCountContainer";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
 
-import ItemListContainer from "./components/pages/ItemListContainer"
+import { CartContainer } from "./components/pages/cart/CartContainer";
 
 
-const App = ()=> {
+
+//import { ItemDetailContainer } from "./components/pages/itemDetailContainer/ItemDetailContainer";
 
 
+const App = () => {
   return (
     <div>
-      <h1 className="title">Este es el titulo</h1>
+      <h1 className="title">Dakotas Cupcakes</h1>
 
-      <Navbar />
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={ <ItemListContainer/> } />
+          <Route path="/category/:category" element={ < ItemListContainer/> } />
 
-      <ItemListContainer greeting="Bienvenidos a Dakota Cupcakes" />
 
-    </div> 
+
+          <Route path="/cart" element={<CartContainer />} />
+          <Route path="/item/:id" element={ <ItemDetailContainer /> } />
+
+
+
+        </Routes>
+      </BrowserRouter>
+
+
+
+
+      <ItemCountContainer/>
+
+
+      
+      <ItemDetailContainer/>
+
+    </div>
   );
 };
 
-export default App
+export default App;
