@@ -1,8 +1,9 @@
 import ItemCountContainer from "../../common/itemCount/ItemCountContainer";
 import "./ItemDetail.css";
 
-export const ItemDetailPresentacionel = ({ item, onAdd }) => {
-  console.log(item);
+
+export const ItemDetailPresentacionel = ({ item, onAdd, initial}) => {
+  //console.log(item);
   return (
     <div>
       <div className={"containerItemDetail"}>
@@ -19,8 +20,19 @@ export const ItemDetailPresentacionel = ({ item, onAdd }) => {
       
         </div>
       </div>
+
+      {
+        initial && <h6>Ya tienes {initial} en el carrito</h6>
+      }
+
+
+
       <div>
-        <ItemCountContainer stock={item.stock} onAdd={onAdd} />;
+        <ItemCountContainer 
+          stock={item.stock}
+          onAdd={onAdd}
+          initial={initial}
+          />
       </div>
     </div>
   );

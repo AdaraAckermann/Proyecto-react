@@ -1,15 +1,21 @@
 import { useState} from "react";
 import ItemCountPresentacional from "./ItemCountPresentacional";
+import Swal from 'sweetalert2';
 
-const ItemCountContainer = ( {stock} ) => {
-  const [ counter, setCounter ] = useState (1);
+
+const ItemCountContainer = ( {stock, onAdd, initial= 1 } ) => {
+  const [ counter, setCounter ] = useState (initial);
 
   const addOne = () =>{
-   // if (counter < stock ) {
+    if (counter < stock ) {
       setCounter (counter + 1);
-    //} else {
-      //alert ("Stock maximo");
-//}
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Stock maximo",
+        text: "No es posible agregar mas unidades",
+      });
+}
   };
 
   const subOne = () =>{
@@ -25,7 +31,7 @@ const ItemCountContainer = ( {stock} ) => {
   };
 
 
-  return <ItemCountPresentacional counter= {counter} addOne={addOne}  subOne={subOne} reset={reset}/>;
+  return <ItemCountPresentacional counter= {counter} addOne={addOne}  subOne={subOne} reset={reset} onAdd={onAdd} />;
 
 };
 

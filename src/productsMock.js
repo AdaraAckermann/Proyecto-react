@@ -1,15 +1,6 @@
 export let products = [
   {
-    id: 1,
-    title: "Cupcakes de vainilla",
-    price: 500,
-    description: "Masa dulce",
-    img: "https://res.cloudinary.com/dwgaqa7wc/image/upload/v1708363947/recetas-9820-cupcakes-de-vainilla-sencillos-2000-19c6dac0bae94224a200b3537fb0a3e9_frnekq.jpg",
-    stock: 18,
-    category: "Con relleno",
-  },
-  {
-    id: 2,
+  
     title: "Cupcakes de vainilla",
     price: 600,
     description: "Masa dulce",
@@ -18,16 +9,7 @@ export let products = [
     category: "Con relleno",
   },
   {
-    id: 3,
-    title: "Cupcakes de chocolate",
-    price: 500,
-    description: "Masa dulce",
-    img: "https://res.cloudinary.com/dwgaqa7wc/image/upload/v1709064593/7-ideas-cupcakes-tem_C3_A1tico-para-cumplea_C3_B1os-infantiles_ejwqpj.jpg",
-    stock: 18,
-    category: "Personalizados",
-  },
-  {
-    id: 4,
+    
     title: "Cupcakes de chocolate",
     price: 600,
     description: "Masa dulce",
@@ -36,7 +18,7 @@ export let products = [
     category: "Con relleno",
   },
   {
-    id: 5,
+    
     title: "Cupcakes de banana",
     price: 500,
     description: "Masa dulce",
@@ -45,7 +27,7 @@ export let products = [
     category: "Personalizados",
   },
   {
-    id: 6,
+    
     title: "Cupcakes de banana",
     price: 800,
     description: "Masa dulce",
@@ -54,16 +36,16 @@ export let products = [
     category: "Sin tacc",
   },
   {
-    id: 7,
+    
     title: "Cupcakes de Arandanos",
     price: 500,
     description: "Masa dulce",
     img: "https://res.cloudinary.com/dwgaqa7wc/image/upload/v1709064913/super_mario_cupcakes_n6clzj.jpg",
     stock: 18,
-    category:  "Personalizados",
+    category: "Personalizados",
   },
   {
-    id: 8,
+    
     title: "Cupcakes de limon",
     price: 600,
     description: "Masa dulce",
@@ -72,7 +54,7 @@ export let products = [
     category: "Con relleno",
   },
   {
-    id: 9,
+    
     title: "Cupcakes de manzana",
     price: 500,
     description: "Masa dulce",
@@ -81,7 +63,7 @@ export let products = [
     category: "Sin relleno",
   },
   {
-    id: 10,
+    
     title: "Cupcakes de manzana",
     price: 800,
     description: "Masa dulce",
@@ -90,7 +72,7 @@ export let products = [
     category: "Sin tacc",
   },
   {
-    id: 11,
+    
     title: "Cupcakes de pasta de mani",
     price: 650,
     description: "Masa dulce",
@@ -99,7 +81,7 @@ export let products = [
     category: "Con relleno",
   },
   {
-    id: 12,
+    
     title: "Cupcakes de zanahoria",
     price: 650,
     description: "Masa dulce",
@@ -111,7 +93,6 @@ export let products = [
 
 export const getProducts = () => {
   return new Promise((resolve, reject) => {
-
     if (products.length > 0) {
       setTimeout(() => {
         resolve(products);
@@ -141,19 +122,3 @@ export const getProduct = (id) => {
 };
 
 
-
-
-
-
-/*export const getProducts = () => {
-  return new Promise((resolve, reject) => {
-    if (products.length > 0) {
-      setTimeout(() => { //simulamos una demora en el servidor de 2segundos.
-        resolve(products);
-      }, 2000);
-    } else {
-      reject("No hay productos");
-    }
-  });
-}; 
- */

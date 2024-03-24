@@ -1,9 +1,9 @@
-import styles from "./Footer.module.css"
 
-export const Footer =() => {
-    return <div>
-        <h4 className={styles.title} >Este es el footer</h4>
-        <h5 className={styles.titleDos} >Este es otro footer</h5>
 
+export const Footer = () => {
+  return (
+    <div>
+        <h2>Este es el footer</h2>
     </div>
+  )
 }
