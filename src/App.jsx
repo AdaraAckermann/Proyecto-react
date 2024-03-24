@@ -1,9 +1,12 @@
-import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";import { ItemDetailContainer } from "./components/pages/itemDetailContainer/ItemDetailContainer";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./components/pages/itemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartContainer } from "./components/pages/cart/CartContainer";
 import { Layout } from "./components/layout/Layout";
 import { CheckoutContainer } from "./components/pages/checkout/CheckoutContainer";
-import { CartContextProvider }  from "./context/CartContext";
+import CartContextProvider from "./context/CartContext";
+
+
 
 
 const App = () => {

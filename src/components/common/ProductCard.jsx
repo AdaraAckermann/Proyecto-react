@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
  
  export const ProductCard = ({ id, img, title, description, price }) => {
-  //ya desestructurado
+  
   
   return (
     <div className=" card h-100 d-flex flex-column" >

@@ -3,7 +3,7 @@ import "./ItemDetail.css";
 
 
 export const ItemDetailPresentacionel = ({ item, onAdd, initial}) => {
-  //console.log(item);
+  
   return (
     <div>
       <div className={"containerItemDetail"}>

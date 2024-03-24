@@ -1,7 +1,5 @@
-//traer de a 1 producto por ID
 
 import { useContext, useEffect, useState } from "react";
-//import { getProduct } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { ItemDetailPresentacionel } from "./ItemDetailPresentacionel";
 import { CartContext } from "../../../context/CartContext";
@@ -11,7 +9,7 @@ import { collection, doc, getDoc } from "firebase/firestore";
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();
-  //console.log(id)
+  
 
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

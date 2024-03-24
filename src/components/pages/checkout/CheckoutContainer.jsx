@@ -26,8 +26,6 @@ export const CheckoutContainer = () => {
     const envioDeFormulario = (event) => {
         event.preventDefault();
         //Aca manipulo lo que quiera hacer con los datos del formulario
-        //console.log("se envio el formulario");
-        //console.log(userInfo);
 
         let order = {
             buyer: userInfo,
