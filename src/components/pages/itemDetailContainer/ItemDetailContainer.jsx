@@ -1,18 +1,13 @@
 //traer de a 1 producto por ID
 
 import { useContext, useEffect, useState } from "react";
-import { getProduct } from "../../../productsMock";
+//import { getProduct } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { ItemDetailPresentacionel } from "./ItemDetailPresentacionel";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig"; 
 import { collection, doc, getDoc } from "firebase/firestore";
 
-/*
-TAREA: lo mismo que con el itemListContainer y
-guardar en un estado el objeto del producto.
-
-import{ products} from "../../../productsMock";*/
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();

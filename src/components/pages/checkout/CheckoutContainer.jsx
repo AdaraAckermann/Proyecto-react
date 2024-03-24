@@ -1,17 +1,51 @@
 import { useState } from "react";
 import { CheckoutPresentacional } from "./CheckoutPresentacional";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
+import { db } from "../../../firebaseConfig";
+
+
+
 
 export const CheckoutContainer = () => {
     const [userInfo, setUserInfo] = useState( {
         name: "",
-        lastName:"",
+        phone:"",
+        email:"",
+
     });
+
+    const [orderId, setOrderId ] = useState(null)
+
+    const{ cart, getTotalPrice, clearCart } = useContext (CartContext)
+    let totalPrice = getTotalPrice()
+
+
 
     const envioDeFormulario = (event) => {
         event.preventDefault();
         //Aca manipulo lo que quiera hacer con los datos del formulario
-        console.log("se envio el formulario");
-        console.log(userInfo);
+        //console.log("se envio el formulario");
+        //console.log(userInfo);
+
+        let order = {
+            buyer: userInfo,
+            items:cart,
+            total: totalPrice
+        }
+        
+        let ordersCollection = collection ( db, "orders" )
+
+        addDoc( ordersCollection, order).then( (res) => setOrderId(res.id))
+
+        cart.forEach(product => {
+            let refDoc = doc(db, "products", product.id)
+            updateDoc( refDoc, { stock: product.stock - product.quantity } )
+            
+        });
+
+        clearCart()
 
     };
 
@@ -21,5 +55,5 @@ export const CheckoutContainer = () => {
     };
 
 
-  return <CheckoutPresentacional envioDeFormulario={envioDeFormulario} capturar={capturar} />;
+  return <CheckoutPresentacional orderId={orderId} envioDeFormulario={envioDeFormulario} capturar={capturar} />;
 };
