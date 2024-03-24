@@ -3,6 +3,12 @@
 
 ¡Bienvenido a Dakotas Cupcakes Ecommerce, donde la dulzura se encuentra con la comodidad! Nuestra tienda en línea ofrece una amplia variedad de exquisitos cupcakes artesanales, elaborados con los ingredientes más frescos y amorosos. Desde clásicos hasta creaciones únicas, ¡te invitamos a explorar y disfrutar!
 
+###Images
+
+Image:
+
+![](https://res.cloudinary.com/dwgaqa7wc/image/upload/v1708364471/cupcakes-con-fresas-y-crema-sobre-mesa-blanca_m3ks4a.jpg)
+
 ## Características
 
 - **Exploración de Productos:** Descubre una amplia gama de cupcakes con descripciones detalladas y opciones de personalización.
@@ -10,9 +16,7 @@
 - **Proceso de Pago Seguro:** Utilizamos tecnología de encriptación para proteger tus datos durante la transacción. Procede al pago de forma segura.
 - **Notificaciones Personalizadas:** Regístrate para recibir ofertas especiales y actualizaciones de nuevos productos.
 
-## Capturas de Pantalla
 
-Inserta aquí algunas capturas de pantalla de tu aplicación para mostrar su diseño y funcionalidades.
 
 ## Tecnologías Utilizadas
 
@@ -38,7 +42,7 @@ Inserta aquí algunas capturas de pantalla de tu aplicación para mostrar su dis
 
 ## Equipo
 
-- Nombre Apellido (@username)
+- Adara Ackermann (@AdaraAckermann)
 
 ## Contacto
 
